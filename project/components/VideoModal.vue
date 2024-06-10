@@ -36,6 +36,7 @@ div
   overflow: hidden
   position: absolute
   top: 0px
+  left: 0px
   display: flex
   align-items: center
   justify-content: center
