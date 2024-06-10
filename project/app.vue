@@ -4,9 +4,6 @@
       <TheHeader />
     </header>
     <main>
-      <Notivue v-slot="item">
-        <Notification :item="item"><NotificationProgress :item="item" /></Notification>
-      </Notivue>
       <NuxtPage />
     </main>
     <footer></footer>
