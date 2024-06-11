@@ -166,6 +166,7 @@ input:focus
   margin-top: 21px
   display: flex
   flex-direction: row
+  width: 563px
   gap: 21px
   button
     display: flex

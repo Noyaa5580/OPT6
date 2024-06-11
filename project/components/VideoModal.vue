@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="modal">
     <p class="close"><img src="/public/assets/icons/cross.svg" alt="" @click="this.unmountComponent()"></p>
     <iframe
       width="960"
@@ -30,11 +30,10 @@ export default {
 </script>
 
 <style lang = "sass" scoped>
-div
+.modal
   width: 100%
-  min-height: 100vh
-  overflow: hidden
-  position: absolute
+  height: 100vh
+  position: fixed
   top: 0px
   left: 0px
   display: flex
