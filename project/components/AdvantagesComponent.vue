@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style lang = "sass" scoped>
+<style lang="sass" scoped>
 h2
   font-weight: 700
   font-size: 34px
@@ -74,7 +74,7 @@ h2
   gap: 35px
   margin-top: 34px
 .advantage
-  padding: 42px 20px  
+  padding: 42px 20px
   box-sizing: border-box
   display: flex
   justify-content: center
@@ -104,4 +104,33 @@ h2
     font-weight: 400
     font-size: 15px
     line-height: 120%
+
+@media (min-width: 320px) and (max-width: 767px)
+  h2
+    width: 300px
+    font-size: 24px
+
+  .advantages
+    width: 300px
+  .advantage
+    width: 300px
+    max-height: 200px
+
+@media (min-width: 768px) and (max-width: 1023px)
+  h2
+    width: 740px
+    font-size: 24px
+  .advantages
+    width: 740px
+    gap: 10px
+    flex-wrap: wrap
+
+@media (min-width: 1024px) and (max-width: 1439px)
+
+  h2
+    width: 900px
+  .advantages
+    justify-content: space-around
+    width: 1024px
+    flex-wrap: wrap
 </style>

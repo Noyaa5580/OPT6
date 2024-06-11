@@ -105,9 +105,9 @@ export default {
 };
 </script>
 
-<style lang = "sass" scoped>
+<style lang="sass" scoped>
 .Notivue__notification
-  min-width: 400px
+  width: 400px
   display: flex
   flex-direction: row
 
@@ -210,5 +210,48 @@ button:active
   line-height: 120%
   color: #8f8f8f
   width: 563px
+
+@media (min-width: 320px) and (max-width: 767px)
+  .Notivue__notification
+    width: 300px
+    display: flex
+    flex-direction: row
+
+  h2
+    width: 300px
+    font-size: 24px
+
+  .car_number
+    flex-direction: column
+    width: 300px
+
+  form
+    width: 300px
+
+  input
+    padding-left: 6px
+
+  #number
+    width: 300px
+    margin-bottom: 16px
+
+  #region
+    width: 300px
+
+  #ts_reg
+    width: 300px
+
+  .buttons
+    flex-direction: column
+    width: 300px
+    gap: 12px
+
+  .agree
+    width: 300px
+
+@media (min-width: 1024px) and (max-width: 1439px)
+  div
+    width: 600px
+
 </style>
 

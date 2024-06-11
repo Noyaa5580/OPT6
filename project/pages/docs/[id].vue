@@ -29,7 +29,10 @@
       <section>
         <h3>Заголовок 2</h3>
         <p>
-         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur porro autem hic perspiciatis doloribus optio non illo voluptatibus nihil ducimus id nulla quo dolores quia qui earum, adipisci reiciendis omnis?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
+          porro autem hic perspiciatis doloribus optio non illo voluptatibus
+          nihil ducimus id nulla quo dolores quia qui earum, adipisci reiciendis
+          omnis?
         </p>
       </section>
       <section>
@@ -63,44 +66,95 @@ export default {
 };
 </script>
 
-<style lang= "sass" scoped>
+<style lang="sass" scoped>
 .page
-    padding-left: 374px
-    padding-right: 384px
+  padding-left: 374px
+  padding-right: 384px
 
 .bread
-    margin-top: 20px
-    display: flex
-    align-items: center
-    font-weight: 400
-    font-size: 13px
-    line-height: 120%
-    p
-        cursor: pointer
+  margin-top: 20px
+  display: flex
+  align-items: center
+  font-weight: 400
+  font-size: 13px
+  line-height: 120%
+  p
+    cursor: pointer
     a
-        color: #000
-        text-decoration: none
+      color: #000
+      text-decoration: none
 #page_name
-    color: #8f8f8f
+  color: #8f8f8f
 
 .dot
-    width: 5px
-    height: 5px
-    border-radius: 50%
-    background-color: #000
-    margin: 0px 10px
+  width: 5px
+  height: 5px
+  border-radius: 50%
+  background-color: #000
+  margin: 0px 10px
 
 .name
-    margin-bottom: 40px
+  margin-bottom: 40px
 
 .page_content
-    margin-top: 20px
+  margin-top: 20px
+  h3
+    font-weight: 700
+    font-size: 41px
+    line-height: 120%
+  section
+    margin-top: 30px
     h3
-        font-weight: 700
-        font-size: 41px
-        line-height: 120%
+      margin-bottom: 25px
+
+@media (min-width: 320px) and (max-width: 767px)
+  .page
+    padding-left: 10px
+    padding-right: 10px
+
+  .bread
+    font-size: 10px
+    a
+      color: #000
+      text-decoration: none
+  .page_content
     section
-        margin-top: 30px
-        h3
-            margin-bottom: 25px
+      margin-top: 12px
+      h3
+        margin-bottom: 8px
+      p
+        font-size: 12px
+    h3
+      font-weight: 700
+      font-size: 24px
+      line-height: 120%
+
+  .name
+    margin-bottom: 12px
+@media (min-width: 768px) and (max-width: 1023px)
+  .page
+    padding-left: 70px
+    padding-right: 90px
+
+  .bread
+    a
+      color: #000
+      text-decoration: none
+
+  .page_content
+    section
+      margin-top: 24px
+      h3
+        margin-bottom: 12px
+
+  .name
+    margin-bottom: 24px
+@media (min-width: 1024px) and (max-width: 1439px)
+  .page
+    padding-left: 120px
+    padding-right: 140px
+  .bread
+    a
+      color: #000
+      text-decoration: none
 </style>

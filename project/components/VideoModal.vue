@@ -1,9 +1,13 @@
 <template>
   <div class="modal">
-    <p class="close"><img src="/public/assets/icons/cross.svg" alt="" @click="this.unmountComponent()"></p>
+    <p class="close">
+      <img
+        src="/public/assets/icons/cross.svg"
+        alt=""
+        @click="this.unmountComponent()"
+      />
+    </p>
     <iframe
-      width="960"
-      height="532"
       src="https://www.youtube.com/embed/ywg7cW0Txs4?si=8Alr50QDIP6bN_9P"
       title="YouTube video player"
       frameborder="0"
@@ -16,7 +20,7 @@
 
 <script>
 export default {
-    data: function () {
+  data: function () {
     return {
       modal_state: false,
     };
@@ -29,11 +33,12 @@ export default {
 };
 </script>
 
-<style lang = "sass" scoped>
+<style lang="sass" scoped>
 .modal
   width: 100%
   height: 100vh
   position: fixed
+  z-index: 3
   top: 0px
   left: 0px
   display: flex
@@ -47,6 +52,38 @@ p
   justify-content: flex-end
   margin-bottom: 8px
 
-img 
+iframe
+  width: 960px
+  height: 532px
+
+img
   cursor: pointer
+
+@media (min-width: 320px) and (max-width: 767px)
+
+  iframe
+    width: 300px
+    height: 200px
+  .modal
+    overflow: hidden
+  p
+    width: 300px
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+  iframe
+    width: 700px
+    height: 400px
+  .modal
+    overflow: hidden
+  p
+    width: 700px
+
+
+@media (min-width: 1024px) and (max-width: 1439px)
+  iframe
+    width: 800px !important
+    height: 400px !important
+  p
+    width: 800px
 </style>

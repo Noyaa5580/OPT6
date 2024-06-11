@@ -27,4 +27,35 @@ div
   margin-top: 79px
   width: 1135px
   margin-bottom: 104px
+
+@media (min-width: 320px) and (max-width: 767px)
+  div
+    overflow: hidden
+  .form_container
+    flex-direction: column
+    margin-top: 32px
+    margin-bottom: 40px
+    img
+      max-width: 300px
+
+@media (min-width: 768px) and (max-width: 1023px)
+  div
+    overflow: hidden
+  .form_container
+    flex-direction: column
+    margin-top: 32px
+    margin-bottom: 40px
+    img
+      max-width: 500px
+
+@media (min-width: 1024px) and (max-width: 1439px)
+  div
+    overflow: hidden
+  .form_container
+    width: 1000px
+    margin-top: 32px
+    margin-bottom: 40px
+    gap: 20px
+    img
+      max-width: 400px
 </style>

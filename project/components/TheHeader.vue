@@ -78,4 +78,44 @@ button:hover
 
 button:active
   scale: 0.9
+
+@media (min-width: 320px) and (max-width: 767px)
+  .header
+    width: 300px
+    justify-content: space-between
+
+  .links
+    flex-direction: column
+    justify-content: center
+    padding-top: 2px
+    height: 100%
+    gap: 0px
+    margin-right: 12px
+    p
+      font-size: 11px
+    img
+      width: 70px
+
+  .buttons
+    gap: 8px
+    button
+      font-size: 11px
+
+  .reg
+    width: 70px
+    height: 25px
+    font-size: 10px !important
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .header
+    width: 740px
+    justify-content: space-between
+    align-items: flex-end
+
+  .links
+    padding-bottom: 1px
+
+@media (min-width: 1024px) and (max-width: 1439px)
+  .header
+    width: 980px
 </style>
