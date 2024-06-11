@@ -1,22 +1,22 @@
 <template>
   <div class="card">
     <div class="info">
-      <p class="name">{{name}}</p>
+      <p class="name">{{ name }}</p>
       <p class="desc">
-       {{desc}}
+        {{ desc }}
       </p>
     </div>
-    <button>Перейти</button>
+    <NuxtLink :to="'/docs/'+ id" > <button>Перейти</button></NuxtLink>
   </div>
 </template>
 
 <script>
 export default {
-    props:{
-        id: Number,
-        name: String,
-        desc: String
-    }
+  props: {
+    id: Number,
+    name: String,
+    desc: String,
+  },
 };
 </script>
 

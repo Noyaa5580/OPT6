@@ -48,7 +48,17 @@
         />
       </div>
     </div>
-    <div class="pagination"></div>
+    <div class="pagination">
+      <div
+        class="pagination_element_active"
+        ref="pg1"
+        @click="this.pg1()"
+      ></div>
+      <div class="pagination_element" ref="pg2" @click="this.pg2()"></div>
+      <div class="pagination_element" ref="pg3" @click="this.pg3()"></div>
+      <div class="pagination_element" ref="pg4" @click="this.pg4()"></div>
+      <div class="pagination_element" ref="pg5" @click="this.pg5()"></div>
+    </div>
   </div>
 </template>
 
@@ -142,24 +152,136 @@ export default {
         },
       ],
       slider_pos: 0,
+      pg_pos: 1,
     };
   },
   methods: {
     slider_left() {
       this.slider_pos += 101.9;
       this.$refs.slider.style.left = this.slider_pos + "%";
+      this.pg_pos -= 1;
+      if (this.pg_pos < 1) {
+        this.pg_pos = 5;
+      }
       if (this.slider_pos > 0) {
-        this.slider_pos = 0;
+        this.slider_pos = -407;
         this.$refs.slider.style.left = this.slider_pos + "%";
+      }
+      switch (this.pg_pos) {
+        case 1:
+          this.pg1();
+          break;
+        case 2:
+          this.pg2();
+          break;
+        case 3:
+          this.pg3();
+          break;
+        case 4:
+          this.pg4();
+          break;
+        case 5:
+          this.pg5();
+          break;
+        default:
+          break;
       }
     },
     slider_right() {
       this.slider_pos -= 101.9;
       this.$refs.slider.style.left = this.slider_pos + "%";
+      this.pg_pos += 1;
+      if (this.pg_pos > 5) {
+        this.pg_pos = 1;
+      }
       if (this.slider_pos <= -408) {
         this.slider_pos = 0;
         this.$refs.slider.style.left = this.slider_pos + "%";
       }
+      switch (this.pg_pos) {
+        case 1:
+          this.pg1();
+          break;
+        case 2:
+          this.pg2();
+          break;
+        case 3:
+          this.pg3();
+          break;
+        case 4:
+          this.pg4();
+          break;
+        case 5:
+          this.pg5();
+          break;
+        default:
+          break;
+      }
+    },
+    pg1() {
+      this.$refs.slider.style.left = "0%";
+      this.$refs.pg2.classList.add("pagination_element");
+      this.$refs.pg3.classList.add("pagination_element");
+      this.$refs.pg4.classList.add("pagination_element");
+      this.$refs.pg5.classList.add("pagination_element");
+      this.$refs.pg2.classList.remove("pagination_element_active");
+      this.$refs.pg3.classList.remove("pagination_element_active");
+      this.$refs.pg4.classList.remove("pagination_element_active");
+      this.$refs.pg5.classList.remove("pagination_element_active");
+      this.$refs.pg1.classList.remove("pagination_element");
+      this.$refs.pg1.classList.add("pagination_element_active");
+    },
+    pg2() {
+      this.$refs.slider.style.left = "-101.9%";
+      this.$refs.pg1.classList.add("pagination_element");
+      this.$refs.pg3.classList.add("pagination_element");
+      this.$refs.pg4.classList.add("pagination_element");
+      this.$refs.pg5.classList.add("pagination_element");
+      this.$refs.pg1.classList.remove("pagination_element_active");
+      this.$refs.pg3.classList.remove("pagination_element_active");
+      this.$refs.pg4.classList.remove("pagination_element_active");
+      this.$refs.pg5.classList.remove("pagination_element_active");
+      this.$refs.pg2.classList.remove("pagination_element");
+      this.$refs.pg2.classList.add("pagination_element_active");
+    },
+    pg3() {
+      this.$refs.slider.style.left = "-203.8%";
+      this.$refs.pg1.classList.add("pagination_element");
+      this.$refs.pg2.classList.add("pagination_element");
+      this.$refs.pg4.classList.add("pagination_element");
+      this.$refs.pg5.classList.add("pagination_element");
+      this.$refs.pg1.classList.remove("pagination_element_active");
+      this.$refs.pg2.classList.remove("pagination_element_active");
+      this.$refs.pg4.classList.remove("pagination_element_active");
+      this.$refs.pg5.classList.remove("pagination_element_active");
+      this.$refs.pg3.classList.remove("pagination_element");
+      this.$refs.pg3.classList.add("pagination_element_active");
+    },
+    pg4() {
+      this.$refs.slider.style.left = "-305.7%";
+      this.$refs.pg1.classList.add("pagination_element");
+      this.$refs.pg3.classList.add("pagination_element");
+      this.$refs.pg2.classList.add("pagination_element");
+      this.$refs.pg5.classList.add("pagination_element");
+      this.$refs.pg1.classList.remove("pagination_element_active");
+      this.$refs.pg2.classList.remove("pagination_element_active");
+      this.$refs.pg3.classList.remove("pagination_element_active");
+      this.$refs.pg5.classList.remove("pagination_element_active");
+      this.$refs.pg4.classList.remove("pagination_element");
+      this.$refs.pg4.classList.add("pagination_element_active");
+    },
+    pg5() {
+      this.$refs.slider.style.left = "-407.6%";
+      this.$refs.pg1.classList.add("pagination_element");
+      this.$refs.pg3.classList.add("pagination_element");
+      this.$refs.pg4.classList.add("pagination_element");
+      this.$refs.pg2.classList.add("pagination_element");
+      this.$refs.pg1.classList.remove("pagination_element_active");
+      this.$refs.pg3.classList.remove("pagination_element_active");
+      this.$refs.pg4.classList.remove("pagination_element_active");
+      this.$refs.pg2.classList.remove("pagination_element_active");
+      this.$refs.pg5.classList.remove("pagination_element");
+      this.$refs.pg5.classList.add("pagination_element_active");
     },
   },
 };
@@ -221,4 +343,26 @@ h2
 
 #right
     border-radius: 50% 0px 0px 50%
+
+.pagination
+    margin-top: 4px
+    margin-bottom: 200px
+    width: 1105px
+    height: 7px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 5px
+    div
+        transition: .1s all ease-in-out
+.pagination_element
+    border-radius: 50%
+    width: 7px
+    height: 7px
+    background-color: #D9D9D9
+.pagination_element_active
+    border-radius: 50%
+    width: 10px
+    height: 10px
+    background-color: #007AFF
 </style>
