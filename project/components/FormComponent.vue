@@ -84,6 +84,7 @@ export default {
         this.formData.region != "" &&
         this.formData.ts_reg != ""
       ) {
+        // postData method
         push.success("Your message has been successfully sent.");
       } else {
         this.$refs.number.style.border = "1px solid #ff0000";

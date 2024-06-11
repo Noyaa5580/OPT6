@@ -1,17 +1,18 @@
 <template>
   <nav>
-    <div class="links">
-      <NuxtLink to="/">
-        <img src="public/assets/logo.svg" alt="" />
-      </NuxtLink>
-      <NuxtLink to="/rates"><p>Тарифы</p></NuxtLink>
-      <NuxtLink to="/contacts"><p>Контакты</p></NuxtLink>
-      
-    </div>
-    <div class="buttons">
-      <button class="number">+7 495 118-44-22</button>
-      <button class="auth">Вход</button>
-      <button class="reg">Регистрация</button>
+    <div class="header">
+      <div class="links">
+        <NuxtLink to="/">
+          <img src="public/assets/logo.svg" alt="" />
+        </NuxtLink>
+        <NuxtLink to="/rates"><p>Тарифы</p></NuxtLink>
+        <NuxtLink to="/contacts"><p>Контакты</p></NuxtLink>
+      </div>
+      <div class="buttons">
+        <button class="number">+7 495 118-44-22</button>
+        <button class="auth">Вход</button>
+        <button class="reg">Регистрация</button>
+      </div>
     </div>
   </nav>
 </template>
@@ -27,9 +28,14 @@ nav
   background: linear-gradient(90deg, #000 30%, #1c2734 73%)
   display: flex
   align-items: center
-  justify-content: space-around
+  justify-content: center
   color: #fff
 
+.header
+  display: flex
+  width: 1161px
+  justify-content: space-between
+  align-items: center
 a
   color: #fff
   text-decoration: none

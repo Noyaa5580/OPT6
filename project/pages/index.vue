@@ -2,15 +2,15 @@
   <div>
     <div class="form_container">
       <FormComponent />
-      <img src="/public/assets/laptop.svg" alt="">
+      <img src="/public/assets/laptop.svg" alt="" />
     </div>
     <AdvantagesComponent />
+    <SliderComponent />
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="sass" scoped>
