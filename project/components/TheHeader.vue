@@ -37,6 +37,8 @@ nav
   justify-content: space-between
   align-items: center
 a
+  display: flex
+  align-items: center
   color: #fff
   text-decoration: none
 
@@ -113,7 +115,7 @@ button:active
     align-items: flex-end
 
   .links
-    padding-bottom: 1px
+
 
 @media (min-width: 1024px) and (max-width: 1439px)
   .header
