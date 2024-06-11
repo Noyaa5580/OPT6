@@ -80,9 +80,9 @@ export default {
   line-height: 120%
   p
     cursor: pointer
-    a
-      color: #000
-      text-decoration: none
+a
+  color: #000
+  text-decoration: none
 #page_name
   color: #8f8f8f
 
